@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+  box-sizing: border-border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #f8fafc;
+  background-color: #0f172a;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #334155;
+}
+
+.logo {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #94a3b8;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #6366f1;
+}
+
+/* Common Section */
+section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 0.5rem;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+}
+
+.hero img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.2rem;
+  border: 3px solid #6366f1;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 1.2rem;
+  color: #818cf8;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.cta-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #475569;
+  color: #cbd5e1;
+}
+
+.btn-secondary:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+/* Cards & Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: #6366f1;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Contact Section */
+.contact-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.contact-btn {
+  padding: 10px 18px;
+  background-color: #1e293b;
+  color: #f8fafc;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  border: 1px solid #334155;
+  transition: all 0.2s ease;
+}
+
+.contact-btn:hover {
+  background-color: #6366f1;
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0b1120;
+  color: #64748b;
+  border-top: 1px solid #1e293b;
+}
+.card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow: hidden; /* photo ko box se bahar jaane se rokega */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px; /* fixed height */
+  object-fit: cover; /* image crop hokar box me fit ho jayegi */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+}</style>
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav>
+    <div class="logo"><strong>Portfolio</strong></div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- hero -->
+  <section class="hero">
+    <img src="aditya_photo.jpeg" alt="Profile Picture">
+    <h1>Aditya Sinha</h1>
+    <h2>DSA enthusiast | Aspiring  SDE</h2>
+    <p>Aspiring Software Development engineer focused on building efficient software and mastering core cs concepts like DSA, OS and DBMS. active competitive programmer with 100+ algorithmic problems solved on leetcode.</p>
+    <div class="cta-buttons">
+      <a href="#projects" class="btn">View Work</a>
+      <a href="#contact" class="btn btn-secondary">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section id="about">
+    <h2>About</h2>
+    <p><p>I am a <b><i>Computer Science student</i></b> with a strong passion for <b>Backend Engineering</b> and <i>core CS fundamentals</i>. I enjoy solving complex algorithmic problems and have solved over <b>100+ challenges</b> on LeetCode. Currently, I am focusing on <b><i>Data Structures</i></b>, System Design, and <i>Database Management Systems</i>.</p></p>
+  </section>
+
+ <!-- skills -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Programming Languages</h3>
+      <p>C++, Java, Python, HTML/CSS</p>
+    </div>
+    <div class="card">
+      <h3>Data Structures & Algorithms</h3>
+      <p>Arrays, Linked Lists, Trees, Graphs, Dynamic Programming</p>
+    </div>
+    <div class="card">
+      <h3>Core CS Fundamentals</h3>
+      <p>Object-Oriented Programming (OOPs), OS, DBMS, Computer Networks</p>
+    </div>
+  </div>
+</section>
+
+  <!-- projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <img src="p1.jpg" alt="Portfolio Website" >
+
+        <p><b><i><br>A personal portfolio website to showcase my skills, projects, and experience.</i></b></p>
+        <br>
+        <p><b>Tech Stack:</b> HTML5, CSS3</p>
+      </div>
+      <div class="card">
+        <h3>AI-Driven Website</h3>
+        <img src="p2.jpg" alt="AI-Driven Website" class="card-img">
+        <p><b><i><br>An interactive website powered by artificial intelligence.</i></b></p>
+        <br>
+        <p><b>Tech Stack:</b> React, Tailwind CSS, Lovable AI</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- upcoming projects section -->
+<section id="projects1">
+  <h2>Upcoming Projects</h2>
+  <div class="grid">
+    <div class="card">
+      
+      <h3>1. RISC-V CPU Simulator</h3>
+      <img src="riscv2.jpg" alt="RISC-V CPU Simulator" class="card-img">
+      <p><b>[In Design Phase]</b> Low-level Computer Organization & Architecture (COA) project to design and simulate a RISC-V instruction set architecture (ISA), focusing on instruction execution and CPU pipeline logic.</p>
+    </div>
+
+    <div class="card">
+      
+      <h3>2. Custom TCP/IP Network Protocol</h3>
+      <img src="tcp.jpg" alt="Custom TCP/IP Network Protocol" class="card-img">
+      <p><b>[Planned]</b> Core Computer Networks (CN) low-level implementation focusing on custom socket programming, packet routing, and transport layer flow control.</p>
+    </div>
+
+    <div class="card">
+      
+      <h3>3. Low-Level Memory Allocator</h3>
+      <img src="memory.jpg" alt="Low-Level Memory Allocator" class="card-img">
+      <p><b>[Planned]</b> Core Operating Systems (OS) project to build a custom dynamic memory manager (malloc/free implementation) in C++.</p>
+    </div>
+  </div>
+</section>
+
+ <section id="experience">
+  <h2>Education / Experience</h2>
+  <div class="projects-grid">
+    
+    <div class="card">
+      <h3>Scaler School of Technology</h3>
+      <p><b>4-Year UG Program in Software Development</b> | 2024 - 2028</p>
+      <p>Hands-on industry curriculum covering Data Structures & Algorithms, System Design, Full-Stack Web Development, and Core CS concepts.</p>
+    </div>
+
+    <div class="card">
+      <h3>BITS Pilani</h3>
+      <p><b>B.Sc. in Computer Science (Parallel Degree)</b> | 2024 - 2028</p>
+      <p>Rigorous academic foundation in Computer Science, Discrete Mathematics, Operating Systems, and Computer Networks.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-links">
+    <a href="mailto:sinhaaditya500@gmail.com" class="contact-btn">Email</a>
+    <a href="https://linkedin.com/in/sinhaaditya500" target="_blank" class="contact-btn">LinkedIn</a>
+    <a href="https://github.com/TheSundayCoder" target="_blank" class="contact-btn">GitHub</a>
+    <a href="https://leetcode.com/u/TheSundayCoder" target="_blank" class="contact-btn">LeetCode</a>
+  </div>
+</section>
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2026 Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
